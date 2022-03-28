@@ -37,6 +37,7 @@
             
             Mouse _mouse;
             sf::Keyboard key;
+            int score;
         private:
         protected:
     };
@@ -63,6 +64,7 @@
             sf::Sprite shark_02;
             sf::Texture shark_down;
             sf::Sprite shark_03;
+            int score;
     };
     class Fish1 {
         public:
@@ -74,8 +76,20 @@
             float vitesse;
     };
 
+    class Mire {
+        public:
+            Mire();
+            ~Mire();
+            sf::Texture mire_textur;
+            sf::Sprite mire;
+            sf::Vector2f vector_mire;
+            float vitesse;
+    };
+
     void fish1_sprite(Fish1 *fish1);
-    void display_fish1(Fish1 *fish1, Game *my_game);
+    void display_fish1(Fish1 *fish1, Game *my_game, Shark *shark);
+    void mire_sprite(Mire *mire);
+    void display_mire(Mire *mire, Game *my_game, Shark *shark);
     void background(Game *my_game, sprite *Sprite);
     void display_background(Game *my_game, sprite *sprite);
     void shark_sprite(Shark *shark);

@@ -36,6 +36,7 @@ void shark_sprite(Shark *shark)
     shark->shark_down.loadFromFile("rsc/shark_down.png");
     shark->shark_03.setTexture(shark->shark_down, NULL);
     set_position_shark(shark);
+    shark->score = 0;
 }
 
 void display_shark(Shark *shark, Game *my_game)
