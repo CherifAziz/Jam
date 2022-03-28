@@ -18,10 +18,15 @@ void background(Game *my_game, sprite *Sprite)
 
 void display_background(Game *my_game, sprite *sprite)
 {
+    //sf::Font myfont;
+    //if (!myfont.loadFromFile("arial.ttf"));
     sf::Text mytext;
+    //mytext.setFont(myfont);
     std::stringstream point;
     point << my_game->score; 
     mytext.setString(point.str().c_str());
+    mytext.setFillColor(sf::Color::Red);
+    mytext.setCharacterSize(30);
     if (my_game->elapsed.asMilliseconds() >= 20 && my_game->menu == 1) {
         sprite->vector.x = sprite->vector.x - 5;
         sprite->vector2.x = sprite->vector2.x - 5;

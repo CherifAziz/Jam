@@ -40,7 +40,6 @@ void display_fish1(Fish1 *fish1, Game *my_game, Shark *shark)
             fish1_sprite(fish1);
             my_game->score += 50;
             fish1->vitesse += 0.5;
-            
         }
         my_game->window.draw(fish1->fish1);
     }
