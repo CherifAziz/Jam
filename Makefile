@@ -15,7 +15,8 @@ SRC		=	engine/mouse.cpp \
 			src/shark.cpp \
 			src/menu.cpp \
 			src/sound.cpp \
-			src/fish.cpp
+			src/fish.cpp \
+			src/mire.cpp
 
 OBJ		=	$(SRC:.cpp=.o)
 
