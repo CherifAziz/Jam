@@ -34,10 +34,11 @@ void display_mire(Mire *mire, Game *my_game, Shark *shark)
         mire->mire.setPosition(mire->vector_mire);
         if (mire->vector_mire.x <= -300) {
             mire_sprite(mire);
-            mire->vitesse += 0.5;
+            mire->vitesse += 1;
         }
         if (mire->vector_mire.x <= (shark->vector.x + 100) && mire->vector_mire.x >= (shark->vector.x - 100) && mire->vector_mire.y <= (shark->vector.y + 100) && mire->vector_mire.y >= (shark->vector.y - 100)) {
             my_game->window.close();
+            printf("%d\n", my_game->score);
         }
         my_game->window.draw(mire->mire);
     }
