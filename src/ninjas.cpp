@@ -38,7 +38,7 @@ void display_ninja(Ninja *ninja, Game *my_game, Shark *shark)
         ninja->ninja.setPosition(ninja->vector_ninja);
         if (ninja->vector_ninja.x <= -300) {
             set_pos_ninja(ninja);
-            ninja->vitesse += 0.3;
+            ninja->vitesse += 0.1;
         }
         if (ninja->vector_ninja.x <= (shark->vector.x + 100) && ninja->vector_ninja.x >= (shark->vector.x - 100) && ninja->vector_ninja.y <= (shark->vector.y + 100) && ninja->vector_ninja.y >= (shark->vector.y - 50)) {
             set_pos_ninja(ninja);
@@ -46,7 +46,7 @@ void display_ninja(Ninja *ninja, Game *my_game, Shark *shark)
             my_game->miam.play();
             my_game->clock.restart();
             my_game->score += 50;
-            ninja->vitesse += 0.3;
+            ninja->vitesse += 0.1;
         }
         my_game->window.draw(ninja->ninja);
     }
