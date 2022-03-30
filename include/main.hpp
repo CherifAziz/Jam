@@ -14,6 +14,7 @@
     #include <SFML/Graphics/Font.hpp>
     #include <sstream>
     #include <string>
+    #include <cmath>
 
     class Mouse {
         public:
@@ -30,6 +31,7 @@
             ~Game();
             void event();
             int menu = 0;
+            int anim = 0;
 
             sf::Clock clock;
             sf::Time elapsed;

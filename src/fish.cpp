@@ -43,7 +43,9 @@ void display_fish1(Fish1 *fish1, Game *my_game, Shark *shark)
         }
         if (fish1->vector_fish.x <= (shark->vector.x + 100) && fish1->vector_fish.x >= (shark->vector.x - 100) && fish1->vector_fish.y <= (shark->vector.y + 100) && fish1->vector_fish.y >= (shark->vector.y - 50)) {
             set_pos_fish1(fish1);
+            my_game->anim = 1;
             my_game->miam.play();
+            my_game->clock.restart();
             my_game->score += 50;
             fish1->vitesse += 0.2;
         }
