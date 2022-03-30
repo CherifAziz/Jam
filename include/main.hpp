@@ -10,6 +10,8 @@
     #include <iostream>
     #include <SFML/Graphics.hpp>
     #include <SFML/Audio.hpp>
+    #include <SFML/Graphics/Text.hpp>
+    #include <SFML/Graphics/Font.hpp>
 
     class Mouse {
         public:
@@ -34,7 +36,7 @@
             sf::SoundBuffer game_buf;
             sf::Sound menu_song;
             sf::Sound game_song;
-            
+
             Mouse _mouse;
             sf::Keyboard key;
             int score;
@@ -94,6 +96,11 @@
             sf::Sprite mire;
             sf::Vector2f vector_mire;
             float vitesse;
+    };
+
+    class Text {
+        sf::Font *rubik;
+        sf::Text *Score;
     };
 
     void fish1_sprite(Fish1 *fish1);
