@@ -21,9 +21,9 @@ int main()
     shark_sprite(&shark);
     menu(&Sprite);
     sound(&my_game);
-    fish1_sprite(&fish);
-    mire_sprite(&mire);
-    ninja_sprite(&ninja);
+    set_fish1(&fish);
+    set_mire(&mire);
+    set_ninja(&ninja);
     text(&my_game, &texts);
     my_game.menu_song.play();
 

@@ -15,16 +15,20 @@ Ninja::~Ninja()
 {
 }
 
-void ninja_sprite(Ninja *ninja)
+void set_ninja(Ninja *ninja)
 {
     sf::Vector2f scale = {0.5, 0.5};
     ninja->ninja_textur.loadFromFile("rsc/poisson.png");
     ninja->ninja.setTexture(ninja->ninja_textur, NULL);
+    ninja->vitesse = 0.8;
+    ninja->ninja.setScale(scale);
+}
+
+void set_pos_ninja(Ninja *ninja)
+{
     ninja->vector_ninja.x = 2200;
     ninja->vector_ninja.y = rand() % 500 + 100;
     ninja->ninja.setPosition(ninja->vector_ninja);
-    ninja->ninja.setScale(scale);
-    ninja->vitesse = 1;
 }
 
 void display_ninja(Ninja *ninja, Game *my_game, Shark *shark)
@@ -33,13 +37,13 @@ void display_ninja(Ninja *ninja, Game *my_game, Shark *shark)
         ninja->vector_ninja.x -= ninja->vitesse;
         ninja->ninja.setPosition(ninja->vector_ninja);
         if (ninja->vector_ninja.x <= -300) {
-            ninja_sprite(ninja);
-            ninja->vitesse += 0.8;
+            set_pos_ninja(ninja);
+            ninja->vitesse += 0.3;
         }
         if (ninja->vector_ninja.x <= (shark->vector.x + 100) && ninja->vector_ninja.x >= (shark->vector.x - 100) && ninja->vector_ninja.y <= (shark->vector.y + 100) && ninja->vector_ninja.y >= (shark->vector.y - 50)) {
-            ninja_sprite(ninja);
+            set_pos_ninja(ninja);
             my_game->score += 50;
-            ninja->vitesse += 0.8;
+            ninja->vitesse += 0.3;
         }
         my_game->window.draw(ninja->ninja);
     }
