@@ -20,11 +20,11 @@ void fish1_sprite(Fish1 *fish1)
     sf::Vector2f scale = {0.3, 0.3};
     fish1->fish1_textur.loadFromFile("rsc/fish.png");
     fish1->fish1.setTexture(fish1->fish1_textur, NULL);
-    fish1->vector_fish.x = 3000;
+    fish1->vector_fish.x = 3500;
     fish1->vector_fish.y = rand() % 500 + 100;
     fish1->fish1.setPosition(fish1->vector_fish);
     fish1->fish1.setScale(scale);
-    fish1->vitesse = 0.5;
+    fish1->vitesse = 0.8;
 }
 
 void display_fish1(Fish1 *fish1, Game *my_game, Shark *shark)

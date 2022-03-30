@@ -96,6 +96,11 @@
             sf::Sprite mire;
             sf::Vector2f vector_mire;
             float vitesse;
+
+            sf::Texture mire_textur2;
+            sf::Sprite mire2;
+            sf::Vector2f vector_mire2;
+            float vitesse2;
     };
 
     class Text {
