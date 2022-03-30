@@ -138,6 +138,7 @@
 
     void set_mire(Mire *mire);
     void set_pos_mire(Mire *mire);
+    void set_pos_mire2(Mire *mire);
     void display_mire(Mire *mire, Game *my_game, Shark *shark);
 
     void background(Game *my_game, sprite *Sprite);

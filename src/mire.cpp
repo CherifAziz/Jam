@@ -28,6 +28,7 @@ void set_mire(Mire *mire)
     mire->mire2.setScale(scale);
     mire->vitesse2 = 0.7;
     set_pos_mire(mire);
+    set_pos_mire2(mire);
 }
 
 void set_pos_mire(Mire *mire)
@@ -35,7 +36,10 @@ void set_pos_mire(Mire *mire)
     mire->vector_mire.x = 3000;
     mire->vector_mire.y = rand() % 600 + 100;
     mire->mire.setPosition(mire->vector_mire);
+}
 
+void set_pos_mire2(Mire *mire)
+{
     mire->vector_mire2.x = 2500;
     mire->vector_mire2.y = rand() % 600 + 100;
     mire->mire2.setPosition(mire->vector_mire2);
@@ -57,7 +61,7 @@ void display_mire(Mire *mire, Game *my_game, Shark *shark)
         mire->vector_mire2.x -= mire->vitesse2;
         mire->mire2.setPosition(mire->vector_mire2);
         if (mire->vector_mire2.x <= -300) {
-            set_pos_mire(mire);
+            set_pos_mire2(mire);
             mire->vitesse2 += 0.3;
         }
         if (mire->vector_mire2.x <= (shark->vector.x + 100) && mire->vector_mire2.x >= (shark->vector.x - 100) && mire->vector_mire2.y <= (shark->vector.y + 100) && mire->vector_mire2.y >= (shark->vector.y - 100)) {

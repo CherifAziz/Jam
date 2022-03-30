@@ -9,7 +9,7 @@
 
 void menu(sprite *Sprite)
 {
-    Sprite->menu.loadFromFile("rsc/menu.png");
+    Sprite->menu.loadFromFile("rsc/test.png");
     Sprite->menu_01.setTexture(Sprite->menu, NULL);
 }
 
