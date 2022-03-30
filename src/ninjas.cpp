@@ -18,13 +18,13 @@ Ninja::~Ninja()
 void ninja_sprite(Ninja *ninja)
 {
     sf::Vector2f scale = {0.5, 0.5};
-    ninja->ninja_textur.loadFromFile("rsc/blue_poisson.jpeg");
+    ninja->ninja_textur.loadFromFile("rsc/poisson.png");
     ninja->ninja.setTexture(ninja->ninja_textur, NULL);
     ninja->vector_ninja.x = 2200;
     ninja->vector_ninja.y = rand() % 500 + 100;
     ninja->ninja.setPosition(ninja->vector_ninja);
     ninja->ninja.setScale(scale);
-    ninja->vitesse = 0.8;
+    ninja->vitesse = 1;
 }
 
 void display_ninja(Ninja *ninja, Game *my_game, Shark *shark)
