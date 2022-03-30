@@ -126,14 +126,18 @@
             sf::Vector2f vector2;
     };
 
-    void fish1_sprite(Fish1 *fish1);
+    void set_fish1(Fish1 *fish1);
+    void set_pos_fish1(Fish1 *fish1);
     void display_fish1(Fish1 *fish1, Game *my_game, Shark *shark);
 
-    void ninja_sprite(Ninja *ninja);
+    void set_ninja(Ninja *ninja);
+    void set_pos_ninja(Ninja *ninja);
     void display_ninja(Ninja *ninja, Game *my_game, Shark *shark);
 
-    void mire_sprite(Mire *mire);
+    void set_mire(Mire *mire);
+    void set_pos_mire(Mire *mire);
     void display_mire(Mire *mire, Game *my_game, Shark *shark);
+
     void background(Game *my_game, sprite *Sprite);
     void display_background(Game *my_game, sprite *sprite);
     void shark_sprite(Shark *shark);

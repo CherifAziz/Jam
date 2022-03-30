@@ -23,6 +23,9 @@ void set_position_shark(Shark *shark)
     shark->shark_01.setPosition(shark->vector);
     shark->shark_02.setPosition(shark->vector);
     shark->shark_03.setPosition(shark->vector);
+    shark->shark_eat1.setPosition(shark->vector);
+    shark->shark_eat2.setPosition(shark->vector);
+    shark->shark_eat3.setPosition(shark->vector);
 }
 
 void shark_sprite(Shark *shark)
@@ -35,8 +38,17 @@ void shark_sprite(Shark *shark)
     // shark down
     shark->shark_down.loadFromFile("rsc/shark_down.png");
     shark->shark_03.setTexture(shark->shark_down, NULL);
-    set_position_shark(shark);
     shark->score = 0;
+    // shark eat1
+    shark->eat1.loadFromFile("rsc/eat1.png");
+    shark->shark_eat1.setTexture(shark->eat1, NULL);
+    // shark eat2
+    shark->eat2.loadFromFile("rsc/eat2.png");
+    shark->shark_eat2.setTexture(shark->eat2, NULL);
+    // shark eat3
+    shark->eat3.loadFromFile("rsc/eat3.png");
+    shark->shark_eat3.setTexture(shark->eat3, NULL);
+    set_position_shark(shark);
 }
 
 void display_shark(Shark *shark, Game *my_game)
