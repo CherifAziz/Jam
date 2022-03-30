@@ -12,6 +12,8 @@
     #include <SFML/Audio.hpp>
     #include <SFML/Graphics/Text.hpp>
     #include <SFML/Graphics/Font.hpp>
+    #include <sstream>
+    #include <string>
 
     class Mouse {
         public:
@@ -104,8 +106,16 @@
     };
 
     class Text {
-        sf::Font *rubik;
-        sf::Text *Score;
+        public:
+            Text();
+            ~Text();
+
+            sf::Font font;
+            sf::Text Score;
+            sf::Vector2f vector;
+            sf::Font Arial;
+            sf::Text Score_nbr;
+            sf::Vector2f vector2;
     };
 
     void fish1_sprite(Fish1 *fish1);
@@ -123,5 +133,7 @@
     void display_menu(sprite *Sprite, Game *my_game);
     void menu(sprite *Sprite);
     void sound(Game *my_game);
+    void text(Game *my_game, Text *texts);
+    void display_text(Game *my_game, Text *texts);
 
 #endif /* !MAIN_HPP_ */

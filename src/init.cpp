@@ -10,6 +10,7 @@
 Game::Game()
 {
     window.create(sf::VideoMode(1920,1080,32), "Shark super hunter");
+    score = 0;
 }
 
 Game::~Game()

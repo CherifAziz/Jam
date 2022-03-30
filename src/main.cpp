@@ -15,6 +15,7 @@ int main()
     Fish1 fish;
     Mire mire;
     Ninja ninja;
+    Text texts;
 
     background(&my_game, &Sprite);
     shark_sprite(&shark);
@@ -23,6 +24,7 @@ int main()
     fish1_sprite(&fish);
     mire_sprite(&mire);
     ninja_sprite(&ninja);
+    text(&my_game, &texts);
     my_game.menu_song.play();
 
     while (my_game.window.isOpen()) {
@@ -32,6 +34,7 @@ int main()
         display_fish1(&fish, &my_game, &shark);
         display_ninja(&ninja, &my_game, &shark);
         display_mire(&mire, &my_game, &shark);
+        display_text(&my_game, &texts);
 
         my_game.elapsed = my_game.clock.getElapsedTime();
         if (my_game.elapsed.asSeconds() >= 1)

@@ -62,6 +62,6 @@ void display_mire(Mire *mire, Game *my_game, Shark *shark)
             my_game->window.close();
             printf("%d\n", my_game->score);
         }
-        my_game->window.draw(mire->mire);
+        my_game->window.draw(mire->mire2);
     }
 }
