@@ -39,6 +39,7 @@ void display_ninja(Ninja *ninja, Game *my_game, Shark *shark)
         if (ninja->vector_ninja.x <= (shark->vector.x + 100) && ninja->vector_ninja.x >= (shark->vector.x - 100) && ninja->vector_ninja.y <= (shark->vector.y + 100) && ninja->vector_ninja.y >= (shark->vector.y - 50)) {
             ninja_sprite(ninja);
             my_game->score += 50;
+            my_game->miam.play();
             ninja->vitesse += 0.8;
         }
         my_game->window.draw(ninja->ninja);

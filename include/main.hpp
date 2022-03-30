@@ -36,8 +36,10 @@
             sf::RenderWindow window;
             sf::SoundBuffer menu_buf;
             sf::SoundBuffer game_buf;
+            sf::SoundBuffer eat;
             sf::Sound menu_song;
             sf::Sound game_song;
+            sf::Sound miam;
 
             Mouse _mouse;
             sf::Keyboard key;
@@ -68,6 +70,12 @@
             sf::Sprite shark_02;
             sf::Texture shark_down;
             sf::Sprite shark_03;
+            sf::Texture eat1;
+            sf::Sprite shark_eat1;
+            sf::Texture eat2;
+            sf::Sprite shark_eat2;
+            sf::Texture eat3;
+            sf::Sprite shark_eat3;
             int score;
     };
     class Fish1 {

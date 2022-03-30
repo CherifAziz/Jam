@@ -39,6 +39,7 @@ void display_fish1(Fish1 *fish1, Game *my_game, Shark *shark)
         if (fish1->vector_fish.x <= (shark->vector.x + 100) && fish1->vector_fish.x >= (shark->vector.x - 100) && fish1->vector_fish.y <= (shark->vector.y + 100) && fish1->vector_fish.y >= (shark->vector.y - 50)) {
             fish1_sprite(fish1);
             my_game->score += 50;
+            my_game->miam.play();
             fish1->vitesse += 0.5;
         }
         my_game->window.draw(fish1->fish1);
